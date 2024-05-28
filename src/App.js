@@ -14,26 +14,26 @@ function App() {
   console.log(data, "data");
   console.log(isLoading, "isloading");
 
-  useEffect(() => {
-    setIsLoading(true);
-    fetch(url, {
-      headers: {
-        Authorization: `Basic ${encodedCred}`,
-      },
-    })
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        setData(data);
-        setIsLoading(false);
-      })
-      .catch((err) => console.log(err));
-  }, [encodedCred]);
+  // useEffect(() => {
+  //   setIsLoading(true);
+  //   fetch(url, {
+  //     headers: {
+  //       Authorization: `Basic ${encodedCred}`,
+  //     },
+  //   })
+  //     .then((response) => {
+  //       return response.json();
+  //     })
+  //     .then((data) => {
+  //       setData(data);
+  //       setIsLoading(false);
+  //     })
+  //     .catch((err) => console.log(err));
+  // }, [encodedCred]);
 
   return (
     <div className="bg-bgColor h-[100vh]">
-      <div className="w-[90%] mx-auto ">
+      <div className="w-[90%] lg:w-[98%] mx-auto ">
         <NavBar />
       </div>
     </div>
