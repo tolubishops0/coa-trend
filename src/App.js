@@ -1,23 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useEffect, useState } from "react";
+import NavBar from "./components/NavBar";
 
 function App() {
+  const [isLoading, setIsLoading] = useState(false);
+  const [data, setData] = useState([]);
+
+  const userName = "coalition";
+  const passWord = "skills-test";
+  const encodeCred = btoa(`${userName}:${passWord}`);
+  const url = "https://fedskillstest.coalitiontechnologies.workers.dev";
+
+  console.log(data, "data");
+  console.log(isLoading, "isloading");
+
+  // useEffect(() => {
+  //   setIsLoading(true);
+  //   fetch(url, {
+  //     headers: {
+  //       Authorization: `Basic ${encodeCred}`,
+  //     },
+  //   })
+  //     .then((response) => {
+  //       return response.json();
+  //     })
+  //     .then((data) => {
+  //       setData(data);
+  //       setIsLoading(false);
+  //     })
+  //     .catch((err) => console.log(err));
+  // }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="bg-bgColor h-[100vh]">
+      <div className="w-[90%] mx-auto ">
+        <NavBar />
+      </div>
     </div>
   );
 }
