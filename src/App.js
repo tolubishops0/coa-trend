@@ -8,7 +8,7 @@ function App() {
 
   const userName = "coalition";
   const passWord = "skills-test";
-  const encodeCred = btoa(`${userName}:${passWord}`);
+  const encodedCred = btoa(`${userName}:${passWord}`);
   const url = "https://fedskillstest.coalitiontechnologies.workers.dev";
 
   console.log(data, "data");
@@ -18,7 +18,7 @@ function App() {
     setIsLoading(true);
     fetch(url, {
       headers: {
-        Authorization: `Basic ${encodeCred}`,
+        Authorization: `Basic ${encodedCred}`,
       },
     })
       .then((response) => {
@@ -29,7 +29,7 @@ function App() {
         setIsLoading(false);
       })
       .catch((err) => console.log(err));
-  }, []);
+  }, [encodedCred]);
 
   return (
     <div className="bg-bgColor h-[100vh]">
