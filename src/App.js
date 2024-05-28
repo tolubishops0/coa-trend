@@ -14,22 +14,22 @@ function App() {
   console.log(data, "data");
   console.log(isLoading, "isloading");
 
-  // useEffect(() => {
-  //   setIsLoading(true);
-  //   fetch(url, {
-  //     headers: {
-  //       Authorization: `Basic ${encodeCred}`,
-  //     },
-  //   })
-  //     .then((response) => {
-  //       return response.json();
-  //     })
-  //     .then((data) => {
-  //       setData(data);
-  //       setIsLoading(false);
-  //     })
-  //     .catch((err) => console.log(err));
-  // }, []);
+  useEffect(() => {
+    setIsLoading(true);
+    fetch(url, {
+      headers: {
+        Authorization: `Basic ${encodeCred}`,
+      },
+    })
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        setData(data);
+        setIsLoading(false);
+      })
+      .catch((err) => console.log(err));
+  }, []);
 
   return (
     <div className="bg-bgColor h-[100vh]">
