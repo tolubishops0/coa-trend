@@ -9,15 +9,18 @@ defaults.responsive = true;
 
 defaults.plugins.title.display = true;
 defaults.plugins.title.align = "start";
-defaults.plugins.title.size = "2rem";
+// defaults.plugins.title.size = "2";
+defaults.plugins.title.padding = "20";
 defaults.plugins.title.font = "700";
 defaults.plugins.title.color = "#072635";
 
 const LineChart = ({ chartData }) => {
   return (
     <div className="relative h-[15rem] xl:h-[18rem] w-full">
-      <span className="absolute right-[10%] top-[2.5%] flex items-center justify-center gap-x-1">
-        <p className=" text-black font-semibold text-[0.7rem]">Last Month</p>
+      <span className="absolute right-[10%] top-[6.5%] lg:top-[6%] flex items-baseline justify-center gap-x-1">
+        <p className=" text-black font-bold text-[0.7rem] sm:text-[.9rem]">
+          Last Month
+        </p>
         <img src={ArrowUp} alt="ArrowUp" />
       </span>
       <Line
@@ -50,12 +53,15 @@ const LineChart = ({ chartData }) => {
               text: "Blood Pressure",
               font: (context) => {
                 const width = context.chart.width;
-                if (width < 764) {
-                  return { size: 10, weight: "bold" };
+                if (width < 350) {
+                  return { size: 11, weight: 800 };
                 } else {
-                  return { size: 12, weight: "bold" };
+                  return { size: 12, weight: 700 };
                 }
               },
+            },
+            legend: {
+              display: false,
             },
           },
           scales: {
@@ -73,7 +79,8 @@ const LineChart = ({ chartData }) => {
           ticks: {
             font: (context) => {
               const width = context.chart.width;
-              if (width < 500) {
+              console.log(width);
+              if (width < 350) {
                 return { size: 8 };
               } else {
                 return { size: 10 };

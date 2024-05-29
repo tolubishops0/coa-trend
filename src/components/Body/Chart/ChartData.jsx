@@ -17,7 +17,7 @@ const ChartData = ({ avgData }) => {
         </p>
         <span className="flex items-center justify-start gap-x-2">
           <img src={ArrowUp} alt="ArrowUp" className="hidden lg:block" />
-          <p className="text-defaultColorText text-[0.875rem] font-normal lg:font-medium">
+          <p className="text-defaultColorText text-[0.7rem] lg:text-[0.875rem] font-normal lg:font-medium">
             Higher than Average
           </p>
         </span>
@@ -30,12 +30,12 @@ const ChartData = ({ avgData }) => {
             Diastolic
           </p>
         </span>
-        <p className="text-defaultColorText text-[0.875rem]  font-medium lg:font-bold">
+        <p className="text-defaultColorText text-[0.875rem] font-medium lg:font-bold">
           {avgData.avgDia}
         </p>
         <span className="flex items-center justify-start gap-x-2">
           <img src={ArrowUp} alt="ArrowUp" className="hidden lg:block" />
-          <p className="text-defaultColorText text-[0.875rem] font-normal lg:font-medium">
+          <p className="text-defaultColorText text-[0.7rem] lg:text-[0.875rem] font-normal lg:font-medium">
             Lower than Average
           </p>
         </span>

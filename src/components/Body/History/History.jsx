@@ -36,7 +36,7 @@ const History = () => {
       avgDia: (totalDiastolic / chartData?.length).toFixed(0),
       avgSys: (totalSystolic / chartData?.length).toFixed(0),
     });
-  }, [peopleData, chartData]);
+  }, [peopleData]);
 
   return (
     <div className="bg-white rounded-[1rem]">
@@ -46,11 +46,11 @@ const History = () => {
           className="font-bold text-[1rem] lg:text-headerText pt-3 pb-6">
           Diagnosis History
         </p>
-        <div className="bg-[#F4F0FE] rounded-[12px] py-6 xl:py-3 px-2 xl:px-2  gap-y-4 xl:gap-0 flex flex-col xl:flex-row items-start ">
+        <div className="bg-[#F4F0FE] rounded-[12px] pb-6 xl:pb-3 px-2 xl:px-2 gap-y-4 xl:gap-x-[1rem] flex flex-col xl:flex-row items-start">
           <div className="xl:w-[70%] w-[100%] ">
             <LineChart chartData={chartData} />
           </div>
-          <div className="xl:w-[30%] w-[100%] mt-2">
+          <div className="xl:w-[30%] w-[100%] mt-2 xl:mt-4">
             <ChartData avgData={avgData} chartData={chartData} />
           </div>
         </div>
