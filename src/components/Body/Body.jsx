@@ -13,15 +13,15 @@ const Body = () => {
       {isLoading ? (
         <Loader />
       ) : (
-        <div className="xl:flex justify-between">
-          <div className="w-[22%]">
+        <div className=" flex flex-col xl:flex-row xl:gap-x-6">
+          <div className="xl:w-[25%]">
             <NameList />
           </div>
-          <div className="w-[50%]">
+          <div className="xl:w-[55%]">
             {" "}
             <History />
           </div>
-          <div className="w-[22%]">
+          <div className="xl:w-[20%]">
             <Profile />
           </div>
         </div>

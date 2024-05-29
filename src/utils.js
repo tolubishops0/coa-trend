@@ -12,6 +12,7 @@ import moresimg from "../src/Assests/more_vert_FILL0_wght300_GRAD0_opsz24.png";
 import searchsimg from "../src/Assests/search_FILL0_wght300_GRAD0_opsz24.svg";
 import moreshorimg from "../src/Assests/more_horiz_FILL0_wght300_GRAD0_opsz24.svg";
 import rightIconimg from "../src/Assests/icons8-arrow-30.png";
+import ArrowUpimg from "../src/Assests/ArrowUp.svg";
 
 export const logo = logoimg;
 export const menu = menuimg;
@@ -22,6 +23,7 @@ export const more = moresimg;
 export const moreshor = moreshorimg;
 export const search = searchsimg;
 export const rightIcon = rightIconimg;
+export const ArrowUp = ArrowUpimg;
 
 export const navItems = [
   {
