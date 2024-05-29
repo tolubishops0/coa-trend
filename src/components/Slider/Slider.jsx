@@ -2,7 +2,6 @@ import React from "react";
 import { rightIcon } from "../../utils";
 
 const Slider = ({ showNameList, handleNameListSm }) => {
-  console.log(showNameList);
   return (
     <div
       onClick={() => handleNameListSm()}

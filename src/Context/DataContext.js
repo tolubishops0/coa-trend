@@ -5,15 +5,15 @@ const DataContext = createContext();
 
 const DataProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(false);
-  const [data, setData] = useState([]);
+  // const [data, setData] = useState([]);
 
-  const userName = "coalition";
-  const passWord = "skills-test";
-  const encodedCred = btoa(`${userName}:${passWord}`);
+  // const userName = "coalition";
+  // const passWord = "skills-test";
+  // const encodedCred = btoa(`${userName}:${passWord}`);
 
-  const url = "https://fedskillstest.coalitiontechnologies.workers.dev";
+  // const url = "https://fedskillstest.coalitiontechnologies.workers.dev";
 
-  useEffect(() => {
+  // useEffect(() => {
     // setIsLoading(true);
     // fetch(url, {
     //   mode: "no-cors",
@@ -30,7 +30,7 @@ const DataProvider = ({ children }) => {
     //     setData(data);
     //   })
     //   .catch((err) => console.log(err));
-  }, []);
+  // }, []);
 
   return (
     <DataContext.Provider value={{ peopleData, isLoading }}>

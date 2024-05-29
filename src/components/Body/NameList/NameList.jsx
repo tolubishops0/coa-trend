@@ -20,7 +20,7 @@ const NameList = ({ peopleData }) => {
   };
 
   return (
-    <div className="">
+    <div className="px-4 xl:p-0">
       <Slider handleNameListSm={handleNameListSm} showNameList={showNameList} />
       <div
         className={`fixed w-[100%] xl:w-[20%] bg-white rounded-[1rem] transition-all duration-500 ease-in h-full ${
