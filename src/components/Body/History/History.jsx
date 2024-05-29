@@ -36,7 +36,7 @@ const History = () => {
       avgDia: (totalDiastolic / chartData?.length).toFixed(0),
       avgSys: (totalSystolic / chartData?.length).toFixed(0),
     });
-  }, [peopleData]);
+  }, [peopleData, chartData]);
 
   return (
     <div className="bg-white rounded-[1rem]">
