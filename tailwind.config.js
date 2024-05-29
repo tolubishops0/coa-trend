@@ -6,11 +6,17 @@ module.exports = {
       backgroundColor: {
         bgColor: "#F6F7F8",
       },
+      colors: {
+        defaultColorText: "#072635",
+        subTextColor: "#707070",
+      },
       fontSize: {
-        text: "14px",
+        defaultText: "0.875rem",
+        headerText: "1.5rem",
       },
       lineHeight: {
-        lnHeight: "19px",
+        lnHeight: "1.1875rem",
+        headerHeight: "2.0625rem",
       },
     },
   },
