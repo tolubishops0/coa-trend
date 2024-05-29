@@ -71,7 +71,7 @@ const LineChart = ({ chartData }) => {
             },
           },
           animation: {
-            duration: 500, 
+            duration: 100, 
           },
         }}
       />
