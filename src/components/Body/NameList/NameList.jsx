@@ -1,6 +1,5 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import { docNav, search, moreshor } from "../../../utils";
-import { DataContext } from "../../../Context/DataContext";
 import Slider from "../../Slider/Slider";
 
 const NameList = ({ peopleData }) => {
@@ -16,7 +15,6 @@ const NameList = ({ peopleData }) => {
   }
   const handleNameListSm = () => {
     setShowNameList(!showNameList);
-    console.log("clicked");
   };
 
   return (
@@ -28,7 +26,9 @@ const NameList = ({ peopleData }) => {
         }`}>
         <div className=" flex flex-col gap-y-2 ">
           <div className="flex justify-between item-center p-3">
-            <p className="font-bold text-base  lg:text-headerText ">Patients</p>
+            <p className="font-bold text-[1rem] lg:text-headerText ">
+              Patients
+            </p>
             <img src={search} alt="searc icon" className="w-[1rem]" />
           </div>
           <div className="patient-list flex flex-col w-full">

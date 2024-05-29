@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, {useContext } from "react";
 import NameList from "../Body/NameList/NameList";
 import { DataContext } from "../../Context/DataContext";
 import Loader from "../Loader/Loader";
@@ -13,7 +13,7 @@ const Body = () => {
   return (
     <div>
       {isLoading && <Loader />}
-      <div className="flex">
+      <div className="">
         <NameList peopleData={peopleData} />
         <Chart activeName={activeName} />
       </div>

@@ -1,5 +1,4 @@
 import "./App.css";
-import { useEffect, useState } from "react";
 import NavBar from "./components/NavBar/NavBar";
 import Body from "./components/Body/Body";
 import { DataProvider } from "./Context/DataContext";
