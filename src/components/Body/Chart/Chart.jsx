@@ -1,47 +1,56 @@
-import React, { useState, useContext, useEffect } from "react";
-import { DataContext } from "../../../Context/DataContext";
-import {
-  ResponsiveContainer,
-  LineChart,
-  Line,
-  YAxis,
-  XAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-} from "recharts";
-import { monthMapping } from "../../../utils";
+import React from "react";
+import { Line } from "react-chartjs-2";
+import { Chart, registerables, defaults } from "chart.js";
+Chart.register(...registerables);
 
-const Chart = () => {
-  const { peopleData } = useContext(DataContext);
-  const [chartData, setChartData] = useState({});
-  useEffect(() => {
-    const activeName = peopleData.find(
-      (person) => person.name === "Jessica Taylor"
-    );
-    const blooadPressuredata = activeName.diagnosis_history.map((record) => ({
-      month: `${monthMapping[record.month]} ${record.year}`,
-      diastolic: record.blood_pressure.diastolic.value,
-      systolic: record.blood_pressure.systolic.value,
-    }));
-    setChartData(blooadPressuredata);
-  }, [peopleData]);
+defaults.maintainAspectRatio = true;
+defaults.responsive = true;
 
+defaults.plugins.title.display = true;
+defaults.plugins.title.align = "start";
+defaults.plugins.title.size = "2rem";
+defaults.plugins.title.font = "700";
+defaults.plugins.title.color = "#072635";
+
+const LineChart = ({ chartData }) => {
   return (
     <div>
-      <ResponsiveContainer width="100%" height="100%">
-        <LineChart width={500} height={350} data={chartData}>
-          <CartesianGrid strokeDasharray="3 3 " />
-          <XAxis dataKey="month" />
-          <YAxis />
-          <Tooltip />
-          <Legend />
-          <Line type="monotone" dataKey="diastolic" stroke="#8C6FE6" />
-          <Line type="monotone" dataKey="systolic" stroke="#E66FD2" />
-        </LineChart>{" "}
-      </ResponsiveContainer>
+      <Line
+        data={{
+          labels: chartData.map((item) => item.month),
+          datasets: [
+            {
+              label: "diastolic",
+              data: chartData.map((item) => item.diastolic),
+              backgroundColor: "#8C6FE6",
+              borderColor: "#8C6FE6",
+            },
+            {
+              label: "systolic",
+              data: chartData.map((item) => item.systolic),
+              backgroundColor: "#E66FD2",
+              borderColor: "#E66FD2",
+            },
+          ],
+        }}
+        options={{
+          elements: {
+            line: {
+              tension: 0.5,
+            },
+          },
+          plugins: {
+            title: {
+              text: "Blood Pressure",
+              font: {
+                weight: "bold",
+              },
+            },
+          },
+        }}
+      />
     </div>
   );
 };
 
-export default Chart;
+export default LineChart;

@@ -89,17 +89,17 @@ export const Navsm = ({ setActivetab, activeTab }) => {
 export const NavLg = ({ setActivetab, activeTab }) => {
   return (
     <div className="py-[1rem]">
-      <div className="bg-white px-8 py-[1rem] flex rounded-[4.375rem] justify-between items-center">
+      <div className="bg-white px-8 py-[.5rem] flex rounded-[4.375rem] justify-between items-center">
         <div className="w-[9rem] cursor-pointer">
           <img src={logo} alt="logo-icon" />
         </div>
 
-        <div className="flex items-center justify-center cursor-pointer gap-x-5">
+        <div className="flex items-center justify-center cursor-pointer gap-x-2">
           {navItems.map((item, index) => (
             <button
               onClick={() => setActivetab(item.label)}
               key={index}
-              className={`flex items-center p-[0.8rem] justify-center gap-x-3 ${
+              className={`flex items-center p-[0.5rem] justify-center gap-x-3 ${
                 item.label === activeTab &&
                 "bg-[#01F0D0] rounded-[2.5625rem] transition duration-1000 ease-in-out"
               }`}

@@ -1,22 +1,31 @@
-import React, {useContext } from "react";
+import React, { useContext } from "react";
 import NameList from "../Body/NameList/NameList";
 import { DataContext } from "../../Context/DataContext";
 import Loader from "../Loader/Loader";
-import Chart from "./Chart/Chart";
+import History from "./History/History";
+import Profile from "./Profile/Profile";
 
 const Body = () => {
-  const { peopleData, isLoading } = useContext(DataContext);
-  const activeName = peopleData.find(
-    (person) => person.name === "Jessica Taylor"
-  );
+  const { isLoading } = useContext(DataContext);
 
   return (
     <div>
-      {isLoading && <Loader />}
-      <div className="">
-        <NameList peopleData={peopleData} />
-        <Chart activeName={activeName} />
-      </div>
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <div className="xl:flex justify-between">
+          <div className="w-[22%]">
+            <NameList />
+          </div>
+          <div className="w-[50%]">
+            {" "}
+            <History />
+          </div>
+          <div className="w-[22%]">
+            <Profile />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
