@@ -1,5 +1,6 @@
 import React from "react";
 import { Line } from "react-chartjs-2";
+import { ArrowUp } from "../../../utils";
 import { Chart, registerables, defaults } from "chart.js";
 Chart.register(...registerables);
 
@@ -14,7 +15,11 @@ defaults.plugins.title.color = "#072635";
 
 const LineChart = ({ chartData }) => {
   return (
-    <div className="h-[15rem] xl:h-[18rem] w-full">
+    <div className="relative h-[15rem] xl:h-[18rem] w-full">
+      <span className="absolute right-[10%] top-[2.5%] flex items-center justify-center gap-x-1">
+        <p className=" text-black font-semibold text-[0.7rem]">Last Month</p>
+        <img src={ArrowUp} alt="ArrowUp" />
+      </span>
       <Line
         data={{
           labels: chartData?.map((item) => item.month),
@@ -43,8 +48,13 @@ const LineChart = ({ chartData }) => {
           plugins: {
             title: {
               text: "Blood Pressure",
-              font: {
-                weight: "bold",
+              font: (context) => {
+                const width = context.chart.width;
+                if (width < 764) {
+                  return { size: 10, weight: "bold" };
+                } else {
+                  return { size: 12, weight: "bold" };
+                }
               },
             },
           },
@@ -71,7 +81,7 @@ const LineChart = ({ chartData }) => {
             },
           },
           animation: {
-            duration: 100, 
+            duration: 100,
           },
         }}
       />
