@@ -70,6 +70,9 @@ const LineChart = ({ chartData }) => {
               }
             },
           },
+          animation: {
+            duration: 500, 
+          },
         }}
       />
     </div>
