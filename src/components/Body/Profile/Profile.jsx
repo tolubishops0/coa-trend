@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
+import { DataContext } from "../../../Context/DataContext";
 
 const Profile = () => {
-  return <div className="bg-white w-full h-full">Profile</div>;
+  const { peopleData } = useContext(DataContext);
+
+  return (
+    <div className="bg-white rounded-[1rem] w-full h-full">
+      <div>
+        <img />
+      </div>
+    </div>
+  );
 };
 
 export default Profile;

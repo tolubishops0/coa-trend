@@ -1,14 +1,14 @@
 import { createContext, useState, useEffect } from "react";
-// import { peopleData } from "../utils";
+// import { peopleList } from "../utils";
 
 const DataContext = createContext();
 
 const DataProvider = ({ children }) => {
-  // const isLoading = false;
   const [isLoading, setIsLoading] = useState(false);
-  const [peopleData, setPeopleData] = useState([]);
+  const [peopleList, setPeopleList] = useState([]);
+  const [personData, setPersonData] = useState();
 
-  console.log(peopleData, "data ");
+  console.log(peopleList, "data ");
   const userName = "coalition";
   const passWord = "skills-test";
   const encodedCred = btoa(`${userName}:${passWord}`);
@@ -29,7 +29,7 @@ const DataProvider = ({ children }) => {
         return response?.json();
       })
       .then((data) => {
-        setPeopleData(data);
+        setPeopleList(data);
         setIsLoading(false);
       })
       .catch((err) => {
@@ -39,7 +39,7 @@ const DataProvider = ({ children }) => {
   }, [encodedCred]);
 
   return (
-    <DataContext.Provider value={{ peopleData, isLoading }}>
+    <DataContext.Provider value={{ peopleList, isLoading }}>
       {children}
     </DataContext.Provider>
   );

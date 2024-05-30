@@ -33,17 +33,6 @@ const Body = () => {
         </div>
       )}
     </>
-
-    //  <div className="bg-bgColor">
-    //     <div className="w-[90%] lg:w-[98%] mx-auto ">
-    //       <div>
-    //         <NavBar />
-    //       </div>
-    //       <main>
-    //         <Body />
-    //       </main>
-    //     </div>
-    //   </div>
   );
 };
 
