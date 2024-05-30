@@ -24,7 +24,6 @@ const NameList = () => {
   return (
     <div className="px-4 xl:p-0">
       <div className="xl:hidden">
-        {" "}
         <Slider
           handleNameListSm={handleNameListSm}
           showNameList={showNameList}

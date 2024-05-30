@@ -13,7 +13,7 @@ const Body = () => {
       {isLoading ? (
         <Loader />
       ) : (
-        <div className=" flex flex-col xl:flex-row xl:gap-x-6">
+        <div className="mt-6 flex flex-col xl:flex-row xl:gap-x-6">
           <div className="xl:w-[25%]">
             <NameList />
           </div>

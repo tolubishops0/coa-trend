@@ -12,7 +12,7 @@ const ChartData = ({ avgData }) => {
             Systolic
           </p>
         </span>
-        <p className="text-defaultColorText text-[0.875rem]  font-medium lg:font-bold">
+        <p className="text-defaultColorText text-[0.875rem] xl:text-[1.375rem]   font-medium lg:font-bold">
           {avgData.avgSys}
         </p>
         <span className="flex items-center justify-start gap-x-2">
@@ -30,7 +30,7 @@ const ChartData = ({ avgData }) => {
             Diastolic
           </p>
         </span>
-        <p className="text-defaultColorText text-[0.875rem] font-medium lg:font-bold">
+        <p className="text-defaultColorText text-[0.875rem] xl:text-[1.375rem]   font-medium lg:font-bold">
           {avgData.avgDia}
         </p>
         <span className="flex items-center justify-start gap-x-2">

@@ -1,5 +1,5 @@
 .patient-list {
-  max-height: 70vh;
+  max-height: 130vh;
   overflow-y: auto;
 
   /* scrollbar-width: thin;
@@ -8,7 +8,8 @@
 
 ::-webkit-scrollbar {
   width: 6px;
-  margin-block: 2rem;
+  /* margin-block: 2rem; */
+  padding-bottom: 1rem;
 }
 
 ::-webkit-scrollbar-thumb {

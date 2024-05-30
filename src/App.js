@@ -6,7 +6,7 @@ import { DataProvider } from "./Context/DataContext";
 function App() {
   return (
     <DataProvider>
-      <div className="bg-bgColor h-[100vh]">
+      <div className="bg-bgColor">
         <div className="w-[90%] lg:w-[98%] mx-auto ">
           <div>
             <NavBar />

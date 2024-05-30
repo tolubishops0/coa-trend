@@ -9,17 +9,15 @@ defaults.responsive = true;
 
 defaults.plugins.title.display = true;
 defaults.plugins.title.align = "start";
-// defaults.plugins.title.size = "2";
 defaults.plugins.title.padding = "20";
-defaults.plugins.title.font = "700";
 defaults.plugins.title.color = "#072635";
 
 const LineChart = ({ chartData }) => {
   return (
     <div className="relative h-[15rem] xl:h-[18rem] w-full">
-      <span className="absolute right-[10%] top-[6.5%] lg:top-[6%] flex items-baseline justify-center gap-x-1">
-        <p className=" text-black font-bold text-[0.7rem] sm:text-[.9rem]">
-          Last Month
+      <span className="absolute right-[10%] top-[7.8%] lg:top-[6%] flex items-baseline justify-center gap-x-1">
+        <p className=" text-[#072635] font-semibold text-[0.7rem] sm:text-[.9rem]">
+          Last 6 Month
         </p>
         <img src={ArrowUp} alt="ArrowUp" />
       </span>
@@ -54,9 +52,9 @@ const LineChart = ({ chartData }) => {
               font: (context) => {
                 const width = context.chart.width;
                 if (width < 350) {
-                  return { size: 11, weight: 800 };
+                  return { size: 11, weight: 800, family: "manrope" };
                 } else {
-                  return { size: 12, weight: 700 };
+                  return { size: 14, weight: 900, family: "manrope" };
                 }
               },
             },
@@ -79,7 +77,6 @@ const LineChart = ({ chartData }) => {
           ticks: {
             font: (context) => {
               const width = context.chart.width;
-              console.log(width);
               if (width < 350) {
                 return { size: 8 };
               } else {

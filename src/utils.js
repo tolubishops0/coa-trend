@@ -13,6 +13,9 @@ import searchsimg from "../src/Assests/search_FILL0_wght300_GRAD0_opsz24.svg";
 import moreshorimg from "../src/Assests/more_horiz_FILL0_wght300_GRAD0_opsz24.svg";
 import rightIconimg from "../src/Assests/icons8-arrow-30.png";
 import ArrowUpimg from "../src/Assests/ArrowUp.svg";
+import HeartBPMimg from "../src/Assests/HeartBPM.svg";
+import respiratoryimg from "../src/Assests/respiratory rate.svg";
+import temperatureimg from "../src/Assests/temperature.svg";
 
 export const logo = logoimg;
 export const menu = menuimg;
@@ -24,6 +27,9 @@ export const moreshor = moreshorimg;
 export const search = searchsimg;
 export const rightIcon = rightIconimg;
 export const ArrowUp = ArrowUpimg;
+export const HeartBPM = HeartBPMimg;
+export const respiratory = respiratoryimg;
+export const temperature = temperatureimg;
 
 export const navItems = [
   {
@@ -61,6 +67,32 @@ export const monthMapping = {
   November: "Nov",
   December: "Dec",
 };
+
+export const heartHistory = [
+  {
+    label: "Respiratory Rate",
+    value: "20 bpm",
+    comment: "Normal",
+    img: respiratory,
+    color: "#E0F3FA",
+  },
+  {
+    label: "Temperature",
+    value: "98.6",
+    comment: "Normal",
+    img: temperature,
+    color: "#FFE6E9",
+  },
+  {
+    label: "Heart Rate",
+    value: "78 bpm",
+    comment: "Lower than normal",
+    img: HeartBPM,
+    color: "#FFE6F1",
+  },
+];
+
+export const digonistic = ["Problem/Diagnosis", "Description", "Status"];
 
 export const peopleData = [
   {
