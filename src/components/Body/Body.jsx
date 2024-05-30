@@ -5,27 +5,28 @@ import NavBar from "../NavBar/NavBar";
 import Loader from "../Loader/Loader";
 import History from "./History/History";
 import Profile from "./Profile/Profile";
+import { ToastContainer } from "react-toastify";
 
 const Body = () => {
-  const { isLoading, peopleData } = useContext(DataContext);
+  const { isLoading, peopleList } = useContext(DataContext);
 
   return (
     <>
-      {isLoading || !peopleData ? (
+      <ToastContainer />
+      {isLoading && !peopleList ? (
         <Loader />
       ) : (
         <div className="bg-bgColor">
-          <div className="w-[90%] lg:w-[98%] mx-auto ">
+          <div className="w-[90%] lg:w-[98%] mx-auto py-[1rem]">
             <NavBar />
-            <div className="flex flex-col xl:flex-row xl:gap-x-6">
-              <div className="xl:w-[25%] mt-6">
+            <div className="flex flex-col xl:flex-row xl:gap-x-6 ">
+              <div className="xl:w-[22%] mt-6">
                 <NameList />
               </div>
-              <div className="xl:w-[55%] mt-6">
-                {" "}
+              <div className="xl:w-[55%] mt-6 ">
                 <History />
               </div>
-              <div className="xl:w-[20%]  mt-4">
+              <div className="xl:w-[23%] mt-[.7rem]">
                 <Profile />
               </div>
             </div>

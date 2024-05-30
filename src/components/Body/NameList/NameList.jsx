@@ -1,10 +1,10 @@
 import React, { useState, useContext } from "react";
-import { docNav, search, moreshor } from "../../../utils";
+import { search, moreshor } from "../../../utils";
 import Slider from "../../Slider/Slider";
 import { DataContext } from "../../../Context/DataContext";
 
 const NameList = () => {
-  const { peopleData } = useContext(DataContext);
+  const { peopleList } = useContext(DataContext);
   const [name, setName] = useState("Jessica Taylor");
   const [showNameList, setShowNameList] = useState(false);
 
@@ -36,7 +36,7 @@ const NameList = () => {
         role="dialog"
         aria-modal="true"
         aria-labelledby="nameListTitle">
-        <div className="flex flex-col gap-y-2">
+        <div className="flex flex-col gap-y-2 pr-[0.2rem]">
           <div className="flex justify-between item-center p-3">
             <p
               id="nameListTitle"
@@ -47,8 +47,8 @@ const NameList = () => {
               <img src={search} alt="Search icon" className="w-[1rem]" />
             </button>
           </div>
-          <div className="patient-list flex flex-col w-full mb-2" role="list">
-            {peopleData.map((item, index) => {
+          <div className="patient-list flex flex-col w-full mb-2 " role="list">
+            {peopleList.map((item, index) => {
               const isActive = name === item.name;
               return (
                 <div

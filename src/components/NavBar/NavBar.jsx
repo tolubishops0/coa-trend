@@ -88,7 +88,7 @@ export const Navsm = ({ setActivetab, activeTab }) => {
 
 export const NavLg = ({ setActivetab, activeTab }) => {
   return (
-    <div className="pt-[1rem]">
+    <div className="">
       <div className="bg-white px-8 py-[.5rem] flex rounded-[4.375rem] justify-between items-center">
         <div className="w-[9rem] cursor-pointer">
           <img src={logo} alt="logo-icon" />

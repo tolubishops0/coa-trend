@@ -16,7 +16,7 @@ const LineChart = ({ chartData }) => {
   return (
     <div className="relative h-[15rem] xl:h-[18rem] w-full">
       <span className="absolute right-[10%] top-[7.8%] lg:top-[6%] flex items-baseline justify-center gap-x-1">
-        <p className=" text-[#072635] font-semibold text-[0.7rem] sm:text-[.9rem]">
+        <p className=" text-[#072635] font-semibold text-[0.7rem] sm:text-[.8375rem]">
           Last 6 Month
         </p>
         <img src={ArrowUp} alt="ArrowUp" />

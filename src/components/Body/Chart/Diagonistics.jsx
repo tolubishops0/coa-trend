@@ -1,8 +1,6 @@
 import React from "react";
-import { digonistic } from "../../../utils";
 
-const Diagonistics = ({ activeUser }) => {
-  console.log(activeUser?.diagnostic_list);
+const Diagonistics = ({ personData }) => {
   return (
     <div className="bg-white rounded-[1rem] px-3">
       <div className="w-[100%] mx-auto">
@@ -25,7 +23,7 @@ const Diagonistics = ({ activeUser }) => {
           </p>
         </div>
         <div className="max-h-[10.6rem] overflow-y-auto min-w-[30rem]  px-3 py-4 flex flex-col gap-y-[1.38rem] justify-between ">
-          {activeUser?.diagnostic_list.map((item, index) => (
+          {personData?.diagnostic_list.map((item, index) => (
             <div
               key={index}
               className="h-[2rem] flex items-center justify-between">
@@ -47,42 +45,3 @@ const Diagonistics = ({ activeUser }) => {
 };
 
 export default Diagonistics;
-
-// <table className="table">
-//   <thead className="table-head">
-//     <tr>
-//       {digonistic.map((item, index) => (
-//         <th
-//           className="text-defaultColorText text-defaultText font-bold py-[0.5rem] "
-//           key={index}>
-//           {item}
-//         </th>
-//       ))}
-//       {/* <th className="text-defaultColorText text-defaultText font-bold py-[0.5rem] ">
-//               City
-//             </th>
-//             <th className="text-defaultColorText text-defaultText font-bold py-[0.5rem] ">
-//               Time
-//             </th>
-//             <th className="text-defaultColorText text-defaultText font-bold py-[0.5rem] ">
-//               Country
-//             </th> */}
-//     </tr>
-//   </thead>
-
-//   <tbody>
-//     {activeUser?.diagnostic_list.map((item, index) => (
-//       <tr key={index}>
-//         <td className="text-defaultText text-defaultColorText font-semibold">
-//           {item.name}
-//         </td>
-//         <td className="text-defaultText text-defaultColorText font-semibold">
-//           {item.description}
-//         </td>
-//         <td className="text-defaultText text-defaultColorText font-semibold">
-//           {item.status}
-//         </td>
-//       </tr>
-//     ))}
-//   </tbody>
-// </table>;
