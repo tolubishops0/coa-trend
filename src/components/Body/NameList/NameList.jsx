@@ -47,7 +47,7 @@ const NameList = () => {
               <img src={search} alt="Search icon" className="w-[1rem]" />
             </button>
           </div>
-          <div className="patient-list flex flex-col w-full" role="list">
+          <div className="patient-list flex flex-col w-full mb-2" role="list">
             {peopleData.map((item, index) => {
               const isActive = name === item.name;
               return (
@@ -70,7 +70,7 @@ const NameList = () => {
                     className="flex justify-between item-center p-4">
                     <div className="flex justify-center items-center gap-x-2">
                       <img
-                        src={docNav}
+                        src={item.profile_picture}
                         alt={`${item.name}'s avatar`}
                         className="w-[2rem] h-[2rem]"
                       />

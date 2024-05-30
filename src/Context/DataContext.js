@@ -32,7 +32,10 @@ const DataProvider = ({ children }) => {
         setPeopleData(data);
         setIsLoading(false);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        console.log(err);
+        setIsLoading(false);
+      });
   }, [encodedCred]);
 
   return (
