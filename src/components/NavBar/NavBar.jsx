@@ -37,22 +37,23 @@ export const Navsm = ({ setActivetab, activeTab }) => {
         </div>
 
         <div
-          className={`fixed w-[100%] top-0  bg-white transition-all duration-500 ease-in h-full ${
+          className={` fixed w-[100%] top-0 bg-white transition-all duration-500 ease-in h-full ${
             showNavItems ? "left-[0]" : "left-[100%]"
           }`}>
-          <div className="mt-[8rem] flex flex-col items-center justify-center gap-y-12">
+          <div className=" mt-[8rem] flex flex-col items-center justify-center gap-y-12">
             {navItems.map((item, index) => (
               <div
                 key={index}
                 className="flex  w-[90%] items-center justify-center duration-500">
                 <button
                   onClick={() => handleTabClick(item.label)}
-                  className={`flex items-start justify-start gap-x-4 ${
-                    item.label === activeTab &&
-                    "pb-1 border-b border-b-[#01F0D0]"
+                  className={`flex items-center justify-center gap-x-4 ${
+                    item.label === activeTab && (
+                      <hr className="bg-[#01F0D0] z-20 w-full pt-1 " />
+                    )
                   }`}
                   aria-current={item.label === activeTab ? "page" : undefined}>
-                  <p className="capitalize text-sm font-bold">{item.label}</p>
+                  <p className="capitalize text-lg font-bold">{item.label}</p>
                   <img src={item.icon} alt={`${item.label}-icon`} />
                 </button>
               </div>
@@ -60,11 +61,11 @@ export const Navsm = ({ setActivetab, activeTab }) => {
             <hr className="bg-bgColor z-20 w-full" />
             <div className="flex  w-[90%]  items-center gap-x-4 justify-center">
               <div className="w-[1.5rem]">
-                <img src={docNav} alt="doctor-icon" />
+                <img src={docNav} alt="doctor-icon" className="w-[5rem]" />
               </div>
               <div>
-                <p className="capitalize text-defaultText font-bold text-defaultColorText">
-                  Dr. Jose Simmons
+                <p className="capitalize text-lg font-bold text-defaultColorText">
+                  Dr. Jose Simmonst
                 </p>
                 <p className="capitalize text-defaultText font-medium text-subTextColor">
                   General Practitioner

@@ -13,6 +13,7 @@ import searchsimg from "../src/Assests/search_FILL0_wght300_GRAD0_opsz24.svg";
 import moreshorimg from "../src/Assests/more_horiz_FILL0_wght300_GRAD0_opsz24.svg";
 import rightIconimg from "../src/Assests/icons8-arrow-30.png";
 import ArrowUpimg from "../src/Assests/ArrowUp.svg";
+import ArrowDownimg from "../src/Assests/ArrowDown.svg";
 import HeartBPMimg from "../src/Assests/HeartBPM.svg";
 import respiratoryimg from "../src/Assests/respiratory rate.svg";
 import temperatureimg from "../src/Assests/temperature.svg";
@@ -32,6 +33,7 @@ export const moreshor = moreshorimg;
 export const search = searchsimg;
 export const rightIcon = rightIconimg;
 export const ArrowUp = ArrowUpimg;
+export const ArrowDown = ArrowDownimg;
 export const HeartBPM = HeartBPMimg;
 export const respiratory = respiratoryimg;
 export const temperature = temperatureimg;
@@ -103,15 +105,6 @@ export const heartHistory = [
 ];
 
 export const digonistic = ["Problem/Diagnosis", "Description", "Status"];
-export const labHistory = ["Blood tests", "CT Scans", "radiology reports", "X-rays", 'Urine test', ];
-
-export const formatDate = (dateinfo) => {
-  console.log(dateinfo);
-  const [month, day, year] = dateinfo?.split("/")?.map(Number);
-  const date = new Date(year, month - 1, day);
-  const options = { year: "numeric", month: "long", day: "numeric" };
-  return date.toLocaleDateString("en-US", options);
-};
 
 export const profileData = [
   {
