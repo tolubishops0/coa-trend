@@ -30,7 +30,7 @@ const NameList = () => {
         />
       </div>
       <div
-        className={`z-[100] fixed w-[100%] xl:static bg-white rounded-[1rem] transition-all duration-500 ease-in h-full ${
+        className={`z-[80] fixed w-[100%] xl:static bg-white rounded-[1rem] transition-all duration-500 ease-in h-full ${
           showNameList ? "left-[0]" : "left-[-100%] xl:left-0"
         }`}
         role="dialog"

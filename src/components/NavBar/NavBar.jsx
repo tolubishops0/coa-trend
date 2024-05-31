@@ -16,17 +16,19 @@ export const Navsm = ({ setActivetab, activeTab }) => {
     setshowNavItems(false);
   };
 
+  console.log(activeTab);
+
   return (
     <div>
       <nav>
         <div className="flex justify-between items-center h-[6rem]">
-          <div className="w-[9rem] z-[100]">
+          <div className="w-[9rem] z-[110]">
             <img src={logo} alt="logo-icon" />
           </div>
           <button
             aria-label="Open menu"
             onClick={() => setshowNavItems(!showNavItems)}
-            className="w-[3rem] cursor-pointer z-[100]">
+            className="w-[3rem] cursor-pointer z-[110]">
             <img
               src={showNavItems ? close : menu}
               alt="menu-icon"
@@ -35,20 +37,18 @@ export const Navsm = ({ setActivetab, activeTab }) => {
           </button>
         </div>
         <div
-          className={`z-[50] fixed w-[100%] top-0 bg-white transition-all duration-500 ease-in h-full ${
+          className={`z-[100] fixed w-[100%] top-0 bg-white transition-all duration-500 ease-in h-full ${
             showNavItems ? "left-[0]" : "left-[100%]"
           }`}>
-          <div className="mt-[8rem] flex flex-col items-center justify-center gap-y-12">
+          <div className="mt-[8rem] flex flex-col items-center justify-center gap-y-6">
             {navItems.map((item, index) => (
               <div
                 key={index}
-                className="flex w-[90%] items-center justify-center duration-500">
+                className="w-[100%] flex items-center justify-center duration-500">
                 <button
                   onClick={() => handleTabClick(item.label)}
-                  className={`flex items-center justify-center gap-x-4 ${
-                    item.label === activeTab && (
-                      <hr className="bg-[#01F0D0] z-[100] w-full pt-5" />
-                    )
+                  className={`flex items-center justify-center gap-x-4 py-4 ${
+                    item.label === activeTab && "bg-[#01F0D0] w-[100%]"
                   }`}
                   aria-current={item.label === activeTab ? "page" : undefined}>
                   <p className="capitalize text-lg font-bold">{item.label}</p>
@@ -57,7 +57,7 @@ export const Navsm = ({ setActivetab, activeTab }) => {
               </div>
             ))}
             <hr className="bg-bgColor z-20 w-full" />
-            <div className="flex  w-[90%]  items-center gap-x-4 justify-center">
+            <div className="flex items-center gap-x-4 justify-center">
               <div className="w-[1.5rem]">
                 <img src={docNav} alt="doctor-icon" className="w-[5rem]" />
               </div>
