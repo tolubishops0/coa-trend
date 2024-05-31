@@ -7,7 +7,6 @@ import {
   InsuranceIcon,
   BirthIcon,
   downloadIcon,
-  labHistory,
 } from "../../../utils";
 
 const Profile = () => {
@@ -60,7 +59,11 @@ const Profile = () => {
       <div className="bg-white rounded-[1rem] w-full xl:h-[42.5rem]">
         <div className=" flex flex-col gap-y-8 py-7">
           <div className="flex flex-col items-center justify-center gap-y-4">
-            <img className="w-[50%]" src={personData?.profile_picture} />
+            <img
+              className="w-[50%]"
+              src={personData?.profile_picture}
+              alt="nameListTitle-icon"
+            />
             <p
               id="nameListTitle"
               className="font-bold text-[1rem] lg:text-headerText">
@@ -72,7 +75,7 @@ const Profile = () => {
               <div
                 key={index}
                 className="flex items-center justify-center gap-x-3">
-                <img src={item.icon} />
+                <img src={item.icon} alt={"menu-icon"} />
                 <div className="text-defaultColorText text-defaultText font-medium capitalize flex flex-col gap-y-1">
                   <p className="font-medium ">{item.label}</p>
                   <p className=" font-bold ">{item.value}</p>
@@ -95,7 +98,7 @@ const Profile = () => {
             lab results
           </p>
           <div className="max-h-[12rem] gap-y-[.8rem] overflow-y-auto flex flex-col">
-            {labHistory.map((item, index) => (
+            {personData?.lab_results.map((item, index) => (
               <React.Fragment key={index}>
                 <div
                   onClick={() => setActiveResultIndex(index)}
@@ -105,7 +108,7 @@ const Profile = () => {
                   <p className="text-defaultText text-defaultColorText font-semibold capitalize">
                     {item}
                   </p>
-                  <img src={downloadIcon} />
+                  <img src={downloadIcon} alt="downloadicon" />
                 </div>
               </React.Fragment>
             ))}
