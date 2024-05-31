@@ -20,10 +20,10 @@ const Body = () => {
           <div className="w-[90%] lg:w-[98%] mx-auto py-[1rem]">
             <NavBar />
             <div className="flex flex-col xl:flex-row xl:gap-x-6 xl:items-start ">
-              <div className="xl:w-[22%] mt-6 ">
+              <div className="xl:w-[22%] mt-2 xl:mt-6 ">
                 <NameList />
               </div>
-              <div className="xl:w-[55%] mt-6 ">
+              <div className="xl:w-[55%] mt-2 xl:mt-6 ">
                 <History />
               </div>
               <div className="xl:w-[23%] mt-6 xl:mt-[.7rem]">
