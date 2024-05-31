@@ -9,7 +9,7 @@ import { ToastContainer } from "react-toastify";
 
 const Body = () => {
   const { isLoading, peopleList } = useContext(DataContext);
-  console.log(isLoading, peopleList);
+  console.log(isLoading, typeof peopleList);
   return (
     <>
       <ToastContainer />

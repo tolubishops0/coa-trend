@@ -16,8 +16,6 @@ export const Navsm = ({ setActivetab, activeTab }) => {
     setshowNavItems(false);
   };
 
-  console.log(activeTab);
-
   return (
     <div>
       <nav>
