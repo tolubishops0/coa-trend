@@ -20,14 +20,13 @@ export const Navsm = ({ setActivetab, activeTab }) => {
     <div>
       <nav>
         <div className="flex justify-between items-center h-[6rem]">
-          <div className="w-[9rem] z-20">
+          <div className="w-[9rem] z-[100]">
             <img src={logo} alt="logo-icon" />
           </div>
-
           <button
             aria-label="Open menu"
             onClick={() => setshowNavItems(!showNavItems)}
-            className="w-[3rem] cursor-pointer z-20">
+            className="w-[3rem] cursor-pointer z-[100]">
             <img
               src={showNavItems ? close : menu}
               alt="menu-icon"
@@ -35,21 +34,20 @@ export const Navsm = ({ setActivetab, activeTab }) => {
             />
           </button>
         </div>
-
         <div
-          className={` fixed w-[100%] top-0 bg-white transition-all duration-500 ease-in h-full ${
+          className={`z-[50] fixed w-[100%] top-0 bg-white transition-all duration-500 ease-in h-full ${
             showNavItems ? "left-[0]" : "left-[100%]"
           }`}>
-          <div className=" mt-[8rem] flex flex-col items-center justify-center gap-y-12">
+          <div className="mt-[8rem] flex flex-col items-center justify-center gap-y-12">
             {navItems.map((item, index) => (
               <div
                 key={index}
-                className="flex  w-[90%] items-center justify-center duration-500">
+                className="flex w-[90%] items-center justify-center duration-500">
                 <button
                   onClick={() => handleTabClick(item.label)}
                   className={`flex items-center justify-center gap-x-4 ${
                     item.label === activeTab && (
-                      <hr className="bg-[#01F0D0] z-20 w-full pt-1 " />
+                      <hr className="bg-[#01F0D0] z-[100] w-full pt-5" />
                     )
                   }`}
                   aria-current={item.label === activeTab ? "page" : undefined}>

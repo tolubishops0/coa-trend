@@ -23,14 +23,14 @@ const NameList = () => {
 
   return (
     <div className="px-4 xl:p-0">
-      <div className="xl:hidden">
+      <div className="xl:hidden ">
         <Slider
           handleNameListSm={handleNameListSm}
           showNameList={showNameList}
         />
       </div>
       <div
-        className={`fixed w-[100%] xl:static bg-white rounded-[1rem] transition-all duration-500 ease-in h-full ${
+        className={`z-[100] fixed w-[100%] xl:static bg-white rounded-[1rem] transition-all duration-500 ease-in h-full ${
           showNameList ? "left-[0]" : "left-[-100%] xl:left-0"
         }`}
         role="dialog"
