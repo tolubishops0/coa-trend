@@ -33,12 +33,12 @@ const History = () => {
       avgDia: (totalDiastolic / chartData?.length).toFixed(0),
       avgSys: (totalSystolic / chartData?.length).toFixed(0),
     });
-  }, [personData]);
+  }, [personData, chartData?.length]);
 
   return (
-    <div>
-      <div className="bg-white rounded-[1rem]">
-        <div className="w-[100%] px-3 mx-auto">
+    <div className="">
+      <div className="bg-white rounded-[1rem] flex flex-col gap-y-4 xl:h-[38.5rem]">
+        <div className="w-[100%] px-3 mx-auto h-[]">
           <p
             id="nameListTitle"
             className="font-bold text-[1rem] lg:text-headerText pt-3 pb-6">
@@ -57,7 +57,7 @@ const History = () => {
           </div>
         </div>
       </div>
-      <div className="mt-4">
+      <div className="mt-6">
         <Diagonistics personData={personData} />
       </div>
     </div>

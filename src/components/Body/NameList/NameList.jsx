@@ -36,8 +36,8 @@ const NameList = () => {
         role="dialog"
         aria-modal="true"
         aria-labelledby="nameListTitle">
-        <div className="flex flex-col gap-y-2 pr-[0.2rem]">
-          <div className="flex justify-between item-center p-3">
+        <div className="flex flex-col gap-y-2 pr-[0.2rem] h-[60rem]">
+          <div className="flex justify-between item-center p-3 h-[]">
             <p
               id="nameListTitle"
               className="font-bold text-[1rem] lg:text-headerText">
@@ -47,7 +47,7 @@ const NameList = () => {
               <img src={search} alt="Search icon" className="w-[1rem]" />
             </button>
           </div>
-          <div className="patient-list flex flex-col w-full mb-2 " role="list">
+          <div className="patient-list flex flex-col w-full mb-2" role="list">
             {peopleList.map((item, index) => {
               const isActive = name === item.name;
               return (
@@ -67,8 +67,8 @@ const NameList = () => {
                       }
                     }}
                     tabIndex="0"
-                    className="flex justify-between item-center p-4">
-                    <div className="flex justify-center items-center gap-x-2">
+                    className="flex justify-between item-center px-4">
+                    <div className="flex justify-center items-center gap-x-2 h-[4.5rem]">
                       <img
                         src={item.profile_picture}
                         alt={`${item.name}'s avatar`}

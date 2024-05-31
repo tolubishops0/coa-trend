@@ -36,15 +36,7 @@ export const Navsm = ({ setActivetab, activeTab }) => {
           </button>
         </div>
 
-        {/* {showNavItems && (
-          <div
-            aria-hidden="true"
-            className="fixed bottom-0 left-0 right-0 top-0 z-5 bg-[rgba(1,1,1,0.2)] backdrop-blur-sm transition-all duration-500 ease-in"
-          />
-        )} */}
-
         <div
-          // ref={ref}
           className={`fixed w-[100%] top-0  bg-white transition-all duration-500 ease-in h-full ${
             showNavItems ? "left-[0]" : "left-[100%]"
           }`}>
